@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>html 제목</title>
+        <style>
+            h1 {
+                color:brown;
+                font:bold;
+                font-size: 20px;
+                text-shadow: 5px 5px 3px blue;
+            }
+            body {
+                font-family: "제주고딕";
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1 id = "top">제목</h1>
+        <p>앞 뒤로 빈 줄이 있는 텍스트 단락</p>
+        <hr>
+        <!-- 수평 줄 생김 -->
+        <blockquote>다른 텍스트보다 안으로 들여 써짐</blockquote>
+        <p><strong>굵게 </strong>작성되는 텍스트</p>
+        <p><em>이탤릭체로 </em>작성되는 텍스트</p>
+        <p><q>앞 뒤로 따옴표</q>가 추가되는 인용문</p>
+        <p><mark>형광펜 </mark>효과 텍스트</p>
+        <p>줄 안에서 일부를 <span style="color:blue">묶어서 변경하고</span> 싶을 때는 span</p>
+        <ul>
+            <li>첫번째 목록
+                <ol type = "A">
+                <li>첫번째 내용</li>
+                <li>두번째 내용</li>
+                </ol>
+            </li>
+            <li>두번째 목록
+                <ol type = "A" start = "3">
+                    <li>첫번째 내용</li>
+                    <li>두번째 내용</li>
+                </ol>
+            </li>
+        </ul>
+        <p>아래는 설명을 위한 목록</p>
+        <dl>
+            <dt>title of the list</dt>
+            <dd>first sentence</dd>
+            <dd>second one</dd>
+            <dt>next title of the list</dt>
+            <dd>first</dd>
+            <dd>secomd</dd>
+        </dl>
+        <p>make a table</p>
+        <table>
+            <tr>
+                <th>(1,1)</th>
+                <td>(1,2)</td>
+            </tr>
+            <tr>
+                <th>(2,1)</th>
+                <td>(2,2)</td>
+            </tr>
+        </table>
+        <p>table version2</p>
+        <table border = "l">
+            <colgroup>
+            <col style = "width:100px; background-color: gray;">
+            <col style = "width:300px;">
+            <col style = "width:100px;">
+            <col style = "width:300px;">
+        </colgroup>
+        <tr>
+            <th>name</th>
+            <td></td>
+            <th>phone</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>home</th>
+            <td colspan = "3"></td>
+        </tr>
+        <tr>
+            <th>self</th>
+            <td colspan = "3"></td>
+        </tr>
+        </table>
+        <h2>image test</h2>
+        <figure>
+        <img src = "img.jpg" alt="test_image" width = "400" height = "300">
+        <figcaption>this is sample image</figcaption>
+    </figure>
+    <h3>make a link</h3>
+    <p>text link:<a href="http://www.naver.com">go to naver in this page</a></p>
+    <p>text link:<a href="http://www.naver.com" target = "_blank">go to naver in new page</a></p>
+    </body>
+    <h4>make an anker</h4>
+    <p><a href = "#top">go to up</a></p>
+
+    <h5>image usemap</h5>
+    <figure>
+        <img src = "img.jpg" alt="" width = "400" height = "300" usemap = "#favorites">
+        <map name = "favorites">
+        <area shape="rect" coords="10, 10, 100, 100" href = "http://www.naver.com" target = "_blank">
+        <figcaption>click the left top of the figure then go to naver</figcaption>
+    </figure>
+
+    <h6>make a form</h6>
+    <form>
+        <input type = "text" title = "검색">
+        <input type = "submit" value = "검색">
+    </form>
+
+    <h7>make a form2</h7>
+    <form>
+        <fieldset>
+            <legend>information</legend>
+            <ul>
+                <li>
+                    <label for="name">name</label>
+                    <input type = "text" id = "name" size = "8">
+                </li>
+                <li>
+                    <label for="phone" >phone</label>
+                    <input type = "text" id = "phone" size = "8">
+                </li>
+                <li>
+                    <label for="password">password</label>
+                    <input type = "password" id = "password" maxlength="8" size = "8">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+    <h8>make a form3</h8>
+    <form>
+        <fieldset>
+            <legend>types of form</legend>
+            <ul>
+                <li>
+                    <label class= "reg" for="member">인원<small>(최대 10)</small></label>
+                    <input type = "number" id="member" value="1" min="0" max = "10" step="1">
+                </li>
+                <li>
+                    <label class="reg" for="statis">단계<small>(상중하)</small></label>
+                    <input type="range" id="statis" value="1" min="1" max="3">
+                </li>
+                <li>
+                    <p>select only one</p>
+                    <label><input type="radio" name="purpose" value="first">first</label>
+                    <label><input type="radio" name="purpose" value="second">second</label>
+                    <label><input type="radio" name="purpose" value="third">third</label>
+                </li>
+            </ul>
+        </fieldset>
+
+        <h9>make a autofocus</h9>
+        <form>
+            <fieldset>
+                <legend>autofocus with required</legend>
+                <ul>
+                    <li>
+                        <label class="reg" for="name">name</label>
+                        <input type="text" id="name" autofocus required>
+                        <input type = "submit" value = "submit">
+                    </li>
+                    <li>
+                        <label class="reg" for="phone">phone</label>
+                        <input type="text" id="phone" placeholder="placeholder">
+                        <input type = "submit" value = "submit">
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+
+    </form>
+ 
+    </map>
+
+
+</html>
